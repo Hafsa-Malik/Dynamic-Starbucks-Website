@@ -14,20 +14,9 @@ if(isset($_GET['Submit'])) {
     echo $email;
 
 	//insert into order table	
-	$result = mysqli_query($mysqli, "INSERT INTO orders (name, email, date) VALUES ($name, $email, $date);");
-
-    if($result){
-        echo "Query Run Successfully";
-        
-        }
-        
-        else{
-        
-        echo mysqli_error($mysqli);
-        
-        }
+	$result = mysqli_query($mysqli, "INSERT INTO orders (name, email, date) VALUES ('$name', '$email', '$date');");
 	$mysqli->close();
 }
 
-//header("Location:$_SERVER[HTTP_REFERER]");
+header("Location:$_SERVER[HTTP_REFERER]");
 ?>
