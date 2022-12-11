@@ -1075,32 +1075,9 @@
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Recent Blog</h2>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">‘Today is Day 1’: Starbucks retail leaders at leadership
-                                        event</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 28, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Michael Ko</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">A message from Howard Schultz: The next chapter of
-                                        Reinvention</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 15, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Howard Schultz</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 25</a></div>
-                                </div>
-                            </div>
-                        </div>
+						<?php
+						include "getRecentBlogs.php";
+						?>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
@@ -1132,33 +1109,61 @@
             </div>
           
 
-              <div class="group">
+            <div class="group">
+			  <form action="index.php" method="post" name="form1">
                   <div class="mb-3 vertical">
                     <h3 style="margin-bottom: 1rem;">FEEDBACK</h3>
                     <label style="position:relative; top: 1rem; color: white;" for="exampleFormControlInput1" class="form-label">Order ID</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" name="orderID" placeholder="" required>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label" style="color: white; padding-top: 1rem;">Your Comments</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
+                        <textarea class="form-control" name="comment" rows="3" required></textarea>
+                    </div>
+					<div class="flex">
+						<input type="submit" name="Submit" value="Add" id="addbtn"/>
+					</div>
                   </div>
-                  
+				<?php				
+					if(isset($_POST['Submit'])) {
+						$orderID = mysqli_real_escape_string($mysqli, $_POST['orderID']);
+						$comment = mysqli_real_escape_string($mysqli, $_POST['comment']);
+							
+						// checking empty fields
+						if(empty($orderID)) {
+							echo "<font color='red'>ID field is empty.</font><br/>";
+						}
+						else if(empty($comment)) {
+							echo "<font color='red'>Comment field is empty.</font><br/>";
+						}
+						else { 
+							// if all the fields are filled (not empty) 
+							//insert data to database	
+							$result = mysqli_query($mysqli, "INSERT INTO feedback VALUES(NULL, '$orderID','$comment')");
+							//display success message
+							echo "<font color='#ffc107'>Feedback submitted successfully!";
+							echo "<br/><a style=\"text-decoration:none;color:green;\" href='index.php'>Back to top of page</a>";
+						}
+						
+						$mysqli->close();
+					}
+				?>
+				</form>
     
-                <ul class="ftco-footer-social list-unstyled mt-5">
-                    <li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
-                                class="icon-spotify"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
-                                class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
-                                class="icon-pinterest"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
-                                class="icon-instagram"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
-                                class="icon-youtube"></span></a></li>
-                    <li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
-                    </li>
-                </ul>
-              </div>
+				<ul class="ftco-footer-social list-unstyled mt-5">
+					<li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
+								class="icon-spotify"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
+								class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
+								class="icon-pinterest"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
+								class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
+								class="icon-youtube"></span></a></li>
+					<li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
+					</li>
+				</ul>
+			</div>
               
             <div class="row">
                 <div class="col-md-12 text-center">

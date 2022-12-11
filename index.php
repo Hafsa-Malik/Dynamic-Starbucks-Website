@@ -69,77 +69,32 @@ include_once("config.php");
 	<!-- END nav -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image: url(images/bg_8.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+		<?php
+		$result = mysqli_query($mysqli, "SELECT photoID, image FROM photogallery
+		WHERE type LIKE 'carousel' ORDER BY RAND();");
 
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">MAKE EVERY BUCK WORTH IT WITH STARBUCKS</h1>
-						<p class="mb-4 mb-md-5">We inspire and nurture the human spirit - one person, one cup and one
+		while($res = mysqli_fetch_array($result)) {         
+			echo '
+			<div class="slider-item" style="background-image: url('.$res['image'].');">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+						<div class="col-md-8 col-sm-12 text-center ftco-animate">
+							<span class="subheading">Welcome</span>
+							<h1 class="mb-4">MAKE EVERY BUCK WORTH IT WITH STARBUCKS</h1>
+							<p class="mb-4 mb-md-5">>We inspire and nurture the human spirit - one person, one cup and one
 							neighborhood at a time.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+							<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
+									class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+						</div>
+
 					</div>
-
 				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_6.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">EXPECT MORE THAN JUST COFFEE</h1>
-						<p class="mb-4 mb-md-5">We’re a neighborhood gathering place, a part of your daily routine. Get
-							to know us and you’ll see: we are so much more than what we brew.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_7.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">SPICE UP YOUR FALL</h1>
-						<p class="mb-4 mb-md-5">Warm your senses with our delightfully creamy lattes. Try them hot or
-							iced.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_5.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">THE SECRET IS IN THE BEANS</h1>
-						<p class="mb-4 mb-md-5">Exceptional and rarest coffees from around the world. Sourced for the
-							season, roasted at Starbucks Reserve® Roasteries and crafted with care.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
+			</div>';
+		}
+		?>
+	
 	</section>
 
 	<section class="ftco-intro">
@@ -620,60 +575,7 @@ include_once("config.php");
 				</div>
 			</div>
 			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_1.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 28, 2022</a></div>
-								<div><a href="#">Michael Ko</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span>19</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">‘Today is Day 1’: Starbucks retail leaders at
-									leadership event</a></h3>
-							<p>The District Manager+ Leadership Experience, attended by 2,000, marks a pivotal moment in
-								the Starbucks Reinvention plan.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_2.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 15, 2022</a></div>
-								<div><a href="#">Howard Schultz</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span>25</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">A message from Howard Schultz: The next chapter of
-									Reinvention</a></h3>
-							<p>In a letter to Starbucks partners, CEO shared a set of
-								principles and a new partnership for the company.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_3.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 20, 2022</a></div>
-								<div><a href="#">Michael ko</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 5</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">Starbucks shares update on partner commitments</a></h3>
-							<p>The sessions are ongoing as Starbucks continues to reimagine its future. Some of the
-								commitments made in May completed today.</p>
-						</div>
-					</div>
-				</div>
+				<?php include 'getRecentBlogsTiles.php'; ?>
 			</div>
 		</div>
 	</section>
@@ -751,34 +653,11 @@ include_once("config.php");
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Recent Blog</h2>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">‘Today is Day 1’: Starbucks retail leaders at leadership
-                                        event</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 28, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Michael Ko</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">A message from Howard Schultz: The next chapter of
-                                        Reinvention</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 15, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Howard Schultz</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 25</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+					<h2 class="ftco-heading-2">Recent Blog</h2>
+						<?php
+						include "getRecentBlogs.php";
+						?>
+					</div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4 ml-md-4">
@@ -809,33 +688,61 @@ include_once("config.php");
             </div>
           
 
-              <div class="group">
+            <div class="group">
+			  <form action="index.php" method="post" name="form1">
                   <div class="mb-3 vertical">
                     <h3 style="margin-bottom: 1rem;">FEEDBACK</h3>
                     <label style="position:relative; top: 1rem; color: white;" for="exampleFormControlInput1" class="form-label">Order ID</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="text" class="form-control" name="orderID" placeholder="" required>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label" style="color: white; padding-top: 1rem;">Your Comments</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
+                        <textarea class="form-control" name="comment" rows="3" required></textarea>
+                    </div>
+					<div class="flex">
+						<input type="submit" name="Submit" value="Add" id="addbtn"/>
+					</div>
                   </div>
-                  
+				<?php				
+					if(isset($_POST['Submit'])) {
+						$orderID = mysqli_real_escape_string($mysqli, $_POST['orderID']);
+						$comment = mysqli_real_escape_string($mysqli, $_POST['comment']);
+							
+						// checking empty fields
+						if(empty($orderID)) {
+							echo "<font color='red'>ID field is empty.</font><br/>";
+						}
+						else if(empty($comment)) {
+							echo "<font color='red'>Comment field is empty.</font><br/>";
+						}
+						else { 
+							// if all the fields are filled (not empty) 
+							//insert data to database	
+							$result = mysqli_query($mysqli, "INSERT INTO feedback VALUES(NULL, '$orderID','$comment')");
+							//display success message
+							echo "<font color='#ffc107'>Feedback submitted successfully!";
+							echo "<br/><a style=\"text-decoration:none;color:green;\" href='index.php'>Back to top of page</a>";
+						}
+						
+						$mysqli->close();
+					}
+				?>
+				</form>
     
-                <ul class="ftco-footer-social list-unstyled mt-5">
-                    <li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
-                                class="icon-spotify"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
-                                class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
-                                class="icon-pinterest"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
-                                class="icon-instagram"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
-                                class="icon-youtube"></span></a></li>
-                    <li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
-                    </li>
-                </ul>
-              </div>
+				<ul class="ftco-footer-social list-unstyled mt-5">
+					<li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
+								class="icon-spotify"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
+								class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
+								class="icon-pinterest"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
+								class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
+								class="icon-youtube"></span></a></li>
+					<li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
+					</li>
+				</ul>
+			</div>
               
             <div class="row">
                 <div class="col-md-12 text-center">
