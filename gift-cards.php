@@ -1132,20 +1132,36 @@
                     </div>
                 </div>
             </div>
-            <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
-                            class="icon-spotify"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
-                            class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
-                            class="icon-pinterest"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
-                            class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
-                            class="icon-youtube"></span></a></li>
-                <li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
-                </li>
-            </ul>
+          
+
+              <div class="group">
+                  <div class="mb-3 vertical">
+                    <h3 style="margin-bottom: 1rem;">FEEDBACK</h3>
+                    <label style="position:relative; top: 1rem; color: white;" for="exampleFormControlInput1" class="form-label">Order ID</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white; padding-top: 1rem;">Your Comments</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                  </div>
+                  
+    
+                <ul class="ftco-footer-social list-unstyled mt-5">
+                    <li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
+                                class="icon-spotify"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
+                                class="icon-facebook"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
+                                class="icon-pinterest"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
+                                class="icon-instagram"></span></a></li>
+                    <li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
+                                class="icon-youtube"></span></a></li>
+                    <li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
+                    </li>
+                </ul>
+              </div>
+              
             <div class="row">
                 <div class="col-md-12 text-center">
 
