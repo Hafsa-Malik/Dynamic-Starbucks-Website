@@ -68,9 +68,13 @@ include_once("config.php");
 	</nav>
     <!-- END nav -->
 
+	<!-- carousel -->
     <section class="home-slider owl-carousel">
-
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+	<?php
+		$result = mysqli_query($mysqli, "SELECT image FROM photogallery ORDER BY RAND() LIMIT 1;");
+		$res = mysqli_fetch_array($result);
+		echo "<div class=\"slider-item\" style=\"background-image: url(".$res["image"].");\" data-stellar-background-ratio=\"0.5\">";
+	?>
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
@@ -165,7 +169,7 @@ include_once("config.php");
           <div class="col-md-7 heading-section ftco-animate text-center">
           	<span class="subheading">Discover</span>
             <h2 class="mb-4">Related products</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>From familiar favorites to delicious discoveries, Starbucks offers unlimited ways to enjoy your everyday cup.</p>
           </div>
         </div>
         <div class="row">

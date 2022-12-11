@@ -62,8 +62,11 @@
     <!-- END nav -->
 
     <section class="home-slider owl-carousel">
-
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+      <?php
+        $result = mysqli_query($mysqli, "SELECT image FROM photogallery ORDER BY RAND() LIMIT 1;");
+        $res = mysqli_fetch_array($result);
+        echo "<div class=\"slider-item\" style=\"background-image: url(".$res["image"].");\" data-stellar-background-ratio=\"0.5\">";
+      ?>
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center">
