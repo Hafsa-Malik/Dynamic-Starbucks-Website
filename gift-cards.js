@@ -1,34 +1,15 @@
-var swiper = new Swiper(".slide-container", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    sliderPerGroup: 4,
-    loop: true,
-    centerSlide: "true",
-    fade: "true",
-    grabCursor: "true",
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      520: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1000: {
-        slidesPerView: 4,
-      },
-    },
-  });
-  
+let items = document.querySelectorAll('.carousel .carousel-item')
+
+items.forEach((el) => {
+  const minPerSlide = 1
+  let next = el.nextElementSibling
+  for (var i = 1; i < minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = items[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+  }
+})
