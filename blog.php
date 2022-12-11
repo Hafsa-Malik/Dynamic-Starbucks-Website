@@ -127,61 +127,133 @@ include_once("config.php");
     </section>
 
     <footer class="ftco-footer ftco-section img">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About Us</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">About Us</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Our Company</a></li>
+                            <li><a href="#" class="py-2 d-block">Our Coffee</a></li>
+                            <li><a href="#" class="py-2 d-block">Stories and News</a></li>
+                            <li><a href="#" class="py-2 d-block">Starbucks Archieve</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4">
+					<h2 class="ftco-heading-2">Recent Blog</h2>
+						<?php
+						include "getRecentBlogs.php";
+						?>
+					</div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4 ml-md-4">
+                        <h2 class="ftco-heading-2">Explore</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Careers</a></li>
+                            <li><a href="#" class="py-2 d-block">Social Impact</a></li>
+                            <li><a href="#" class="py-2 d-block">Business Partner</a></li>
+                            <li><a href="#" class="py-2 d-block">Order & Pickup</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">1912 Pike Pl, Seattle,
+                                        WA 98101, United States</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span
+                                            class="text">800-782-7282</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span
+                                            class="text">info@starbucks.com</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-                <?php
-                  include "getRecentBlogs.php";
-                ?>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
-             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                <li><a href="#" class="py-2 d-block">Mixed</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+          
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
+            <div class="group">
+			  <form action="index.php" method="post" name="form1">
+                  <div class="mb-3 vertical">
+                    <h3 style="margin-bottom: 1rem;">FEEDBACK</h3>
+                    <label style="position:relative; top: 1rem; color: white;" for="exampleFormControlInput1" class="form-label">Order ID</label>
+                    <input type="text" class="form-control" name="orderID" placeholder="" required>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white; padding-top: 1rem;">Your Comments</label>
+                        <textarea class="form-control" name="comment" rows="3" required></textarea>
+                    </div>
+					<div class="flex">
+						<input type="submit" name="Submit" value="Add" id="addbtn"/>
+					</div>
+                  </div>
+				<?php				
+					if(isset($_POST['Submit'])) {
+						$orderID = mysqli_real_escape_string($mysqli, $_POST['orderID']);
+						$comment = mysqli_real_escape_string($mysqli, $_POST['comment']);
+							
+						// checking empty fields
+						if(empty($orderID)) {
+							echo "<font color='red'>ID field is empty.</font><br/>";
+						}
+						else if(empty($comment)) {
+							echo "<font color='red'>Comment field is empty.</font><br/>";
+						}
+						else { 
+							// if all the fields are filled (not empty) 
+							//insert data to database	
+							$result = mysqli_query($mysqli, "INSERT INTO feedback VALUES(NULL, '$orderID','$comment')");
+							//display success message
+							echo "<font color='#ffc107'>Feedback submitted successfully!";
+							echo "<br/><a style=\"text-decoration:none;color:green;\" href='index.php'>Back to top of page</a>";
+						}
+						
+						$mysqli->close();
+					}
+				?>
+				</form>
+    
+				<ul class="ftco-footer-social list-unstyled mt-5">
+					<li class="ftco-animate"><a href="https://open.spotify.com/user/starbucks"><span
+								class="icon-spotify"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.facebook.com/Starbucks/"><span
+								class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.pinterest.com/starbucks/"><span
+								class="icon-pinterest"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/starbucks/"><span
+								class="icon-instagram"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.youtube.com/starbucks"><span
+								class="icon-youtube"></span></a></li>
+					<li class="ftco-animate"><a href="https://twitter.com/starbucks/"><span class="icon-twitter"></span></a>
+					</li>
+				</ul>
+			</div>
+              
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <ul class="help">
+                        <li>Privacy Policy</li>
+                        <li>|</li>
+                        <li>Terms of Use</li>
+                        <li>|</li>
+                        <li>CA Supply Chain Act</li>
+                        <li>|</li>
+                        <li>Cookie Preferences</li>
+                    </ul>
+                    <p>
+                        &copy;
+                        <script>document.write(new Date().getFullYear());</script> Starbucks Coffee Company. All rights
+                        reserved.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </footer>
     
   
