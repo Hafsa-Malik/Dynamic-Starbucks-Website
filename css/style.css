@@ -12338,6 +12338,7 @@ textarea.form-control {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 50%;
   position: relative;
+  transition: background 0.8s;
 }
 
 .ftco-footer-social li a span {
@@ -12356,7 +12357,7 @@ iframe {
 }
 
 .ftco-footer-social li a:hover {
-  color: #fff;
+  background: chocolate;
 }
 
 #map {
@@ -13348,4 +13349,18 @@ iframe {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px;
   }
+}
+
+#addbtn{
+  padding:6px 20px;
+  margin-top:15px;
+  margin-bottom: 10px;
+  transition: background 0.8s;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+#addbtn:hover{
+    background: chocolate;
 }
