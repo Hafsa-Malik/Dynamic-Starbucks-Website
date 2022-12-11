@@ -49,16 +49,15 @@ include_once("config.php");
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
 					<li class="nav-item"><a href="gift-cards.php" class="nav-link">Gift Cards</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Shop</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
 							<a class="dropdown-item" href="cart.php">Cart</a>
-							<a class="dropdown-item" href="checkout.html">Checkout</a>
+							<a class="dropdown-item" href="checkout.php">Checkout</a>
 						</div>
 					</li>
-					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
 					<li class="nav-item cart"><a href="cart.php" class="nav-link"><span
 								class="icon icon-shopping_cart"></span><span
 								class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
@@ -621,60 +620,7 @@ include_once("config.php");
 				</div>
 			</div>
 			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_1.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 28, 2022</a></div>
-								<div><a href="#">Michael Ko</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span>19</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">‘Today is Day 1’: Starbucks retail leaders at
-									leadership event</a></h3>
-							<p>The District Manager+ Leadership Experience, attended by 2,000, marks a pivotal moment in
-								the Starbucks Reinvention plan.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_2.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 15, 2022</a></div>
-								<div><a href="#">Howard Schultz</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span>25</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">A message from Howard Schultz: The next chapter of
-									Reinvention</a></h3>
-							<p>In a letter to Starbucks partners, CEO shared a set of
-								principles and a new partnership for the company.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry align-self-stretch">
-						<a href="#" class="block-20"
-							style="background-image: url('images/image_3.jpg');">
-						</a>
-						<div class="text py-4 d-block">
-							<div class="meta">
-								<div><a href="#">Oct 20, 2022</a></div>
-								<div><a href="#">Michael ko</a></div>
-								<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 5</a></div>
-							</div>
-							<h3 class="heading mt-2"><a href="#">Starbucks shares update on partner commitments</a></h3>
-							<p>The sessions are ongoing as Starbucks continues to reimagine its future. Some of the
-								commitments made in May completed today.</p>
-						</div>
-					</div>
-				</div>
+				<?php include 'getRecentBlogsTiles.php'; ?>
 			</div>
 		</div>
 	</section>
@@ -752,34 +698,11 @@ include_once("config.php");
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Recent Blog</h2>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">‘Today is Day 1’: Starbucks retail leaders at leadership
-                                        event</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 28, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Michael Ko</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">A message from Howard Schultz: The next chapter of
-                                        Reinvention</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 15, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Howard Schultz</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 25</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+					<h2 class="ftco-heading-2">Recent Blog</h2>
+						<?php
+						include "getRecentBlogs.php";
+						?>
+					</div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4 ml-md-4">
