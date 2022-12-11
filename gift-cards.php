@@ -99,7 +99,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item featured active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -110,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -132,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -165,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item featured">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -205,7 +205,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel2" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item christmas active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -216,7 +216,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item christmas">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -227,7 +227,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item christmas">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -238,7 +238,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item christmas">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -249,7 +249,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item christmas">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -278,7 +278,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel3" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item holiday active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -289,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item holiday">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -300,7 +300,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item holiday">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -311,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item holiday">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -322,7 +322,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item holiday">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -353,7 +353,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel4" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item redcup active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -364,7 +364,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item redcup">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -375,7 +375,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item redcup">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -386,7 +386,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item redcup">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -397,7 +397,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item redcup">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -409,197 +409,6 @@
                         </div>
                     </div>
                     
-                </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card-heading">BIRTHDAY</div>
-    <div class="container text-center my-3">
-        <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel5" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[15]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[16]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[17]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[18]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[19]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card-heading">THANK YOU</div>
-    <div class="container text-center my-3">
-        <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel6" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[20]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[21]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[22]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[23]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="card-heading">CELEBRATION</div>
-    <div class="container text-center my-3">
-        <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel7" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[24]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[25]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-img">
-                                    <?php       
-                                        echo "<img src=".$ImageArray[26]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
-                                    ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
                 </div>
                 <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel4" role="button"
                     data-bs-slide="prev">
@@ -614,12 +423,195 @@
     </div>
 
 
+    <div class="card-heading">BIRTHDAY</div>
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel5" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item birthday active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[15]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item birthday">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[16]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item birthday">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[17]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item birthday">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[18]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item birthday">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[19]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel5" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel5" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-heading">THANK YOU</div>
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel6" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item thankyou active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[20]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item thankyou">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[21]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item thankyou">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[22]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item thankyou">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[23]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel6" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel6" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-heading">CELEBRATION</div>
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel7" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item celebration active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[24]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item celebration">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[25]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item celebration">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <?php       
+                                        echo "<img src=".$ImageArray[26]." style=\"border-radius: 0.5rem;\" class=\"img-fluid\">";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="card-heading">APPRECIATION</div>
     <div class="container text-center my-3">
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel8" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item appreciation active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -630,7 +622,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item appreciation">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -641,7 +633,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item appreciation">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -652,7 +644,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item appreciation">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -665,11 +657,11 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel8" role="button"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel8" role="button"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
@@ -683,7 +675,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel9" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item hanukkah active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -694,7 +686,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item hanukkah">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -705,7 +697,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item hanukkah">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -718,14 +710,6 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
     </div>
@@ -736,7 +720,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel10" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item khwanzaa active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -747,7 +731,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item khwanzaa">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -758,7 +742,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item khwanzaa">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -771,14 +755,6 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
     </div>
@@ -789,7 +765,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel11" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item spirited active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -802,14 +778,6 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
     </div>
@@ -820,7 +788,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel12" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item workplace active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -831,7 +799,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item workplace">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -842,7 +810,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item workplace">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -853,7 +821,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item workplace">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -866,11 +834,11 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel12" role="button"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel12" role="button"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
@@ -884,7 +852,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel13" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item encouragement active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -895,7 +863,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item encouragement">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -906,7 +874,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item encouragement">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -917,7 +885,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item encouragement">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -930,11 +898,11 @@
                     </div>
                     
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel13" role="button"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel3" role="button"
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel13" role="button"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
@@ -948,7 +916,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel14" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item affection active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -959,7 +927,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item affection">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -970,7 +938,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item affection">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -981,7 +949,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item affection">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -992,7 +960,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item affection">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1004,11 +972,11 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel14" role="button"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel14" role="button"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
@@ -1022,7 +990,7 @@
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel15" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item anytime active">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1033,7 +1001,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item anytime">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1044,7 +1012,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item anytime">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1055,7 +1023,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item anytime">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1066,7 +1034,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item anytime">
                         <div class="col-md-3">
                             <div class="card">
                                 <div class="card-img">
@@ -1078,11 +1046,11 @@
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel15" role="button"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
-                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel2" role="button"
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel15" role="button"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
