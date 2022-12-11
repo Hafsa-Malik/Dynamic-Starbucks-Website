@@ -359,7 +359,7 @@ include_once("config.php");
 			</div>
 			<div class="row">
 				<?php
-					$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(description, 1, 80) AS description, price, image FROM product
+					$result = mysqli_query($mysqli, "SELECT productID AS id, name, SUBSTRING(description, 1, 80) AS description, price, image FROM product
 					WHERE categoryID IN ('1', '4', '5') AND CHAR_LENGTH(name) < 20
 					ORDER BY RAND() LIMIT 4;");
 					while($res = mysqli_fetch_array($result)) {         
@@ -370,7 +370,7 @@ include_once("config.php");
 									<h3><a href=\"#\">".$res["name"]."</a></h3>
 									<p>".$res["description"]."</p>
 									<p class=\"price\"><span>".$res["price"]."</span></p>
-									<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
+									<p><a href=\"addToCart.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to add ".$res["name"]." to cart?')\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
 								</div>
 							</div>
 						</div>";
@@ -452,8 +452,8 @@ include_once("config.php");
 		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
 		              	<div class="row">
 						  	<?php
-							$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
-							WHERE categoryID BETWEEN 1 and 7 AND CHAR_LENGTH(name) < 20
+							$result = mysqli_query($mysqli, "SELECT productID AS id, name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
+							WHERE categoryID BETWEEN 1 and 7 AND CHAR_LENGTH(name) < 15
 							ORDER BY RAND() LIMIT 3;");
 
 							while($res = mysqli_fetch_array($result)) {         
@@ -464,7 +464,7 @@ include_once("config.php");
 		              					<h3><a href=\"#\">".$res["name"]."</a></h3>
 		              					<p>".$res["description"]."</p>
 		              					<p class=\"price\"><span>".$res["price"]."</span></p>
-		              					<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
+		              					<p><a href=\"addToCart.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to add ".$res["name"]." to cart?')\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              			</div>";
@@ -481,9 +481,9 @@ include_once("config.php");
 								<div class=\"row\">";
 
 								$id = $res1["categoryID"];
-								$result2 = mysqli_query($mysqli, "SELECT name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
+								$result2 = mysqli_query($mysqli, "SELECT productID AS id, name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
 								WHERE categoryID = '$id' AND CHAR_LENGTH(name) < 30
-								ORDER BY RAND() LIMIT 4;");
+								ORDER BY RAND() LIMIT 3;");
 	
 								while($res2 = mysqli_fetch_array($result2)) {         
 									echo "<div class=\"col-md-4 text-center\">
@@ -493,7 +493,7 @@ include_once("config.php");
 											  <h3><a href=\"#\">".$res2["name"]."</a></h3>
 											  <p>".$res2["description"]."</p>
 											  <p class=\"price\"><span>".$res2["price"]."</span></p>
-											  <p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
+											  <p><a href=\"addToCart.php?id=$res2[id]\" onClick=\"return confirm('Are you sure you want to add ".$res2["name"]." to cart?')\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
 										  </div>
 									  </div>
 									  </div>";
