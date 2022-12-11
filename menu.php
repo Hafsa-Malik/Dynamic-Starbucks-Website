@@ -70,7 +70,7 @@ include_once("config.php");
     <section class="home-slider owl-carousel">
 
 		<?php
-			$result = mysqli_query($mysqli, "SELECT image FROM photogallery ORDER BY RAND() LIMIT 1;");
+			$result = mysqli_query($mysqli, "SELECT image FROM photogallery WHERE type != 'menu' ORDER BY RAND() LIMIT 1;");
 			$res = mysqli_fetch_array($result);
 			echo "<div class=\"slider-item\" style=\"background-image: url(".$res["image"].");\" data-stellar-background-ratio=\"0.5\">";
 		?>
