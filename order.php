@@ -15,6 +15,17 @@ if(isset($_GET['Submit'])) {
 
 	//insert into order table	
 	$result = mysqli_query($mysqli, "INSERT INTO orders (name, email, date) VALUES ($name, $email, $date);");
+
+    if($result){
+        echo "Query Run Successfully";
+        
+        }
+        
+        else{
+        
+        echo mysqli_error($mysqli);
+        
+        }
 	$mysqli->close();
 }
 
