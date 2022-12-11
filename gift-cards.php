@@ -1,6 +1,6 @@
 <?php
 
-    include ('.\config.php');
+    include ('config.php');
     $ImageArray = array();
     $result = mysqli_query($mysqli, "SELECT image FROM giftcard");
     if(mysqli_num_rows($result) > 0){
@@ -73,13 +73,13 @@
                     <li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="gift-cards.php" class="nav-link">Gift Cards</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
                             <a class="dropdown-item" href="cart.php">Cart</a>
-                            <a class="dropdown-item" href="checkout.html">Checkout</a>
+                            <a class="dropdown-item" href="checkout.php">Checkout</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>

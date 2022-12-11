@@ -47,13 +47,13 @@ include_once("config.php");
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
 					<li class="nav-item"><a href="gift-cards.php" class="nav-link">Gift Cards</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Shop</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
 							<a class="dropdown-item" href="cart.php">Cart</a>
-							<a class="dropdown-item" href="checkout.html">Checkout</a>
+							<a class="dropdown-item" href="checkout.php">Checkout</a>
 						</div>
 					</li>
 					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
@@ -108,7 +108,7 @@ include_once("config.php");
 								
 			        			while($res = mysqli_fetch_array($result)) { 
 									echo "<tr class=\"text-center\">
-										<td class=\"product-remove\"><a href=\"#\"><span class=\"icon-close\"></span></a></td>
+										<td class=\"product-remove\"><a href=\"removeFromCart.php?id=$res[productID]\"><span class=\"icon-close\"></span></a></td>
 										<td class=\"image-prod\"><div class=\"img\" style=\"background-image:url(".$res["image"].");\"></div></td>
 										<td class=\"product-name\">
 											<h3>".$res["name"]."</h3>
@@ -152,7 +152,7 @@ include_once("config.php");
     						<span>$<?php echo $total+1; ?></span>
     					</p>
     				</div>
-    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+    				<p class="text-center"><a href="checkout.php" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
     			</div>
     		</div>
 			</div>
