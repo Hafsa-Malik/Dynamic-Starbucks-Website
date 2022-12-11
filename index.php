@@ -247,26 +247,21 @@ include_once("config.php");
 				</div>
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-6">
-							<div class="menu-entry">
-								<a href="#" class="img" style="background-image: url(images/menu1.png);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry mt-lg-4">
-								<a href="#" class="img" style="background-image: url(images/menu2.png);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry">
-								<a href="#" class="img" style="background-image: url(images/menu3.jpg);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry mt-lg-4">
-								<a href="#" class="img" style="background-image: url(images/menu4.png);"></a>
-							</div>
-						</div>
+							<?php
+								$result = mysqli_query($mysqli, "SELECT image FROM photogallery
+								WHERE type LIKE 'menu' ORDER BY RAND() LIMIT 4;");
+								$i = 0;
+								while($res = mysqli_fetch_array($result)) {         
+									
+									echo '<div class="col-md-6"><div class="menu-entry';
+									// check if i is even
+									if($i % 2 == 0) {
+										echo ' mt-lg-4';
+									}
+									echo '"><a href="#" class="img" style="background-image: url('.$res['image'].');"></a></div></div>';
+									$i++;
+								}
+							?>
 					</div>
 				</div>
 			</div>
@@ -337,38 +332,20 @@ include_once("config.php");
 	<section class="ftco-gallery">
 		<div class="container-wrap">
 			<div class="row no-gutters">
-				<div class="col-md-3 ftco-animate">
-					<a href="index.php" class="gallery img d-flex align-items-center"
-						style="background-image: url(images/gallery-1.jpg);">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-search"></span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 ftco-animate">
-					<a href="index.php" class="gallery img d-flex align-items-center"
-						style="background-image: url(images/gallery-2.jpg);">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-search"></span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 ftco-animate">
-					<a href="index.php" class="gallery img d-flex align-items-center"
-						style="background-image: url(images/gallery-3.jpg);">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-search"></span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 ftco-animate">
-					<a href="index.php" class="gallery img d-flex align-items-center"
-						style="background-image: url(images/gallery-4.jpg);">
-						<div class="icon mb-4 d-flex align-items-center justify-content-center">
-							<span class="icon-search"></span>
-						</div>
-					</a>
-				</div>
+				<?php
+					$result = mysqli_query($mysqli, "SELECT image FROM photogallery
+					WHERE type LIKE 'gallery' ORDER BY RAND() LIMIT 4;");
+					while($res = mysqli_fetch_array($result)) {         
+						echo "<div class=\"col-md-3 ftco-animate\">
+							<a href=\"index.php\" class=\"gallery img d-flex align-items-center\"
+								style=\"background-image: url(".$res["image"].");\">
+								<div class=\"icon mb-4 d-flex align-items-center justify-content-center\">
+									<span class=\"icon-search\"></span>
+								</div>
+							</a>
+						</div>";
+					}
+				?>
 			</div>
 		</div>
 	</section>
