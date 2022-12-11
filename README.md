@@ -1,8 +1,13 @@
 # WebEng-A03
 
-SOMEONE
-WRITE
-DESCRIPTION
-HERE
+## Group Members
+1.	Name (Qalam ID):   Muhammad Mustafa (331945)
+2.	Name (Qalam ID):   Syeda Fatima Shahid (337346)
+3.	Name (Qalam ID):   Syed Sheraz Hussain (335166)
+4.	Name (Qalam ID):   Hafsa Malik (341303)
 
-•	Create a ‘src’ folder and Include all source code along with database dump and a **readme file** with insturctions on setting up the database. 
+## How to setup the database
+- Open phpMyAdmin by visiting http://localhost/phpmyadmin/
+- Click the import button in the navbar
+- In the 'File to import' section choose the 'webassignment.sql' file
+- Click the Import button at the button of the page
