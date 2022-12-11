@@ -69,77 +69,32 @@ include_once("config.php");
 	<!-- END nav -->
 
 	<section class="home-slider owl-carousel">
-		<div class="slider-item" style="background-image: url(images/bg_8.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+		<?php
+		$result = mysqli_query($mysqli, "SELECT photoID, image FROM photogallery
+		WHERE type LIKE 'carousel' ORDER BY RAND();");
 
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">MAKE EVERY BUCK WORTH IT WITH STARBUCKS</h1>
-						<p class="mb-4 mb-md-5">We inspire and nurture the human spirit - one person, one cup and one
+		while($res = mysqli_fetch_array($result)) {         
+			echo '
+			<div class="slider-item" style="background-image: url('.$res['image'].');">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+						<div class="col-md-8 col-sm-12 text-center ftco-animate">
+							<span class="subheading">Welcome</span>
+							<h1 class="mb-4">MAKE EVERY BUCK WORTH IT WITH STARBUCKS</h1>
+							<p class="mb-4 mb-md-5">>We inspire and nurture the human spirit - one person, one cup and one
 							neighborhood at a time.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+							<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
+									class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
+						</div>
+
 					</div>
-
 				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_6.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">EXPECT MORE THAN JUST COFFEE</h1>
-						<p class="mb-4 mb-md-5">We’re a neighborhood gathering place, a part of your daily routine. Get
-							to know us and you’ll see: we are so much more than what we brew.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_7.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">SPICE UP YOUR FALL</h1>
-						<p class="mb-4 mb-md-5">Warm your senses with our delightfully creamy lattes. Try them hot or
-							iced.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="slider-item" style="background-image: url(images/bg_5.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-					<div class="col-md-8 col-sm-12 text-center ftco-animate">
-						<span class="subheading">Welcome</span>
-						<h1 class="mb-4">THE SECRET IS IN THE BEANS</h1>
-						<p class="mb-4 mb-md-5">Exceptional and rarest coffees from around the world. Sourced for the
-							season, roasted at Starbucks Reserve® Roasteries and crafted with care.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
-								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
-					</div>
-
-				</div>
-			</div>
-		</div>
+			</div>';
+		}
+		?>
+	
 	</section>
 
 	<section class="ftco-intro">
