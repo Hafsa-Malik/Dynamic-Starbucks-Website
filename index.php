@@ -43,7 +43,7 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
-					<li class="nav-item"><a href="gift-cards.html" class="nav-link">Gift Cards</a></li>
+					<li class="nav-item"><a href="gift-cards.php" class="nav-link">Gift Cards</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
