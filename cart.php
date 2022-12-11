@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php
+//including the database connection file
+include_once("config.php");
+?>
+
 <html lang="en">
   <head>
     <title>Coffee - Free Bootstrap 4 Template by Colorlib</title>
@@ -31,27 +37,27 @@
   <body>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.jpg" alt="logo" height="65px" width="65px"></a>
+			<a class="navbar-brand" href="index.php"><img class="logo" src="images/logo.jpg" alt="logo" height="65px" width="65px"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
 					<li class="nav-item"><a href="gift-cards.html" class="nav-link">Gift Cards</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Shop</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
-							<a class="dropdown-item" href="cart.html">Cart</a>
+							<a class="dropdown-item" href="cart.php">Cart</a>
 							<a class="dropdown-item" href="checkout.html">Checkout</a>
 						</div>
 					</li>
 					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
-					<li class="nav-item cart"><a href="cart.html" class="nav-link"><span
+					<li class="nav-item cart"><a href="cart.php" class="nav-link"><span
 								class="icon icon-shopping_cart"></span><span
 								class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
 					</li>
@@ -70,7 +76,7 @@
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">Cart</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Cart</span></p>
             </div>
 
           </div>
@@ -179,50 +185,24 @@
           </div>
         </div>
         <div class="row">
-        	<div class="col-md-3">
-        		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);"></a>
-    					<div class="text text-center pt-4">
-    						<h3><a href="#">Coffee Capuccino</a></h3>
-    						<p>A small river named Duden flows by their place and supplies</p>
-    						<p class="price"><span>$5.90</span></p>
-    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-    					</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);"></a>
-    					<div class="text text-center pt-4">
-    						<h3><a href="#">Coffee Capuccino</a></h3>
-    						<p>A small river named Duden flows by their place and supplies</p>
-    						<p class="price"><span>$5.90</span></p>
-    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-    					</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);"></a>
-    					<div class="text text-center pt-4">
-    						<h3><a href="#">Coffee Capuccino</a></h3>
-    						<p>A small river named Duden flows by their place and supplies</p>
-    						<p class="price"><span>$5.90</span></p>
-    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-    					</div>
-    				</div>
-        	</div>
-        	<div class="col-md-3">
-        		<div class="menu-entry">
-    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);"></a>
-    					<div class="text text-center pt-4">
-    						<h3><a href="#">Coffee Capuccino</a></h3>
-    						<p>A small river named Duden flows by their place and supplies</p>
-    						<p class="price"><span>$5.90</span></p>
-    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-    					</div>
-    				</div>
-        	</div>
+			<?php
+				$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(description, 1, 80) AS description, price, image FROM product
+				WHERE CHAR_LENGTH(name) < 20
+				ORDER BY RAND() LIMIT 4;");
+				while($res = mysqli_fetch_array($result)) {         
+					echo "<div class=\"col-md-3\">
+						<div class=\"menu-entry\">
+							<a href=\"#\" class=\"img\" style=\"background-image: url(".$res["image"].");\"></a>
+							<div class=\"text text-center pt-4\">
+								<h3><a href=\"#\">".$res["name"]."</a></h3>
+								<p>".$res["description"]."</p>
+								<p class=\"price\"><span>".$res["price"]."</span></p>
+								<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
+							</div>
+						</div>
+					</div>";
+				}
+			?>
         </div>
     	</div>
     </section>

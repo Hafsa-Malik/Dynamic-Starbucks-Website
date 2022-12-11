@@ -52,12 +52,12 @@ include_once("config.php");
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Shop</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
-							<a class="dropdown-item" href="cart.html">Cart</a>
+							<a class="dropdown-item" href="cart.php">Cart</a>
 							<a class="dropdown-item" href="checkout.html">Checkout</a>
 						</div>
 					</li>
 					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
-					<li class="nav-item cart"><a href="cart.html" class="nav-link"><span
+					<li class="nav-item cart"><a href="cart.php" class="nav-link"><span
 								class="icon icon-shopping_cart"></span><span
 								class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
 					</li>
@@ -76,7 +76,7 @@ include_once("config.php");
 
             <div class="col-md-7 col-sm-12 text-center ftco-animate">
             	<h1 class="mb-3 mt-5 bread">Our Menu</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Menu</span></p>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home</a></span> <span>Menu</span></p>
             </div>
 
           </div>
@@ -322,7 +322,7 @@ include_once("config.php");
         </div>
     		<div class="row d-md-flex">
 	    		<div class="col-lg-12 ftco-animate p-md-5">
-		    		<div class="row">
+		    	<div class="row">
 		          <div class="col-md-12 nav-link-wrap mb-5">
 		            <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 		              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Drinks</a>
@@ -338,9 +338,7 @@ include_once("config.php");
 		          </div>
 				  
 		          <div class="col-md-12 d-flex align-items-center">
-		            
 		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
-
 		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
 		              	<div class="row">
 						  	<?php

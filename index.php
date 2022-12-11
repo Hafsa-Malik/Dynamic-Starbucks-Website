@@ -1,6 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<?php
+//including the database connection file
+include_once("config.php");
+?>
+
+<html lang="en">
 <head>
 	<title>Starbucks Coffee Company</title>
 	<link rel = "icon" href = "images/logo.jpg" type = "image/x-icon">
@@ -49,12 +54,12 @@
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Shop</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown04">
-							<a class="dropdown-item" href="cart.html">Cart</a>
+							<a class="dropdown-item" href="cart.php">Cart</a>
 							<a class="dropdown-item" href="checkout.html">Checkout</a>
 						</div>
 					</li>
 					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
-					<li class="nav-item cart"><a href="cart.html" class="nav-link"><span
+					<li class="nav-item cart"><a href="cart.php" class="nav-link"><span
 								class="icon icon-shopping_cart"></span><span
 								class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
 					</li>
@@ -314,6 +319,7 @@
 		</div>
 	</section>
 
+	<!-- Statictics Bar -->
 	<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_10.jpg);"
 		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
@@ -321,42 +327,20 @@
 			<div class="row justify-content-center">
 				<div class="col-md-10">
 					<div class="row">
-						<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-coffee-cup"></span></div>
-									<strong class="number" data-number="33833">0</strong>
-									<span>Cafes Worldwide</span>
+						<?php
+							$result = mysqli_query($mysqli, "SELECT name, count FROM stat;");
+							while($res = mysqli_fetch_array($result)) {         
+								echo "<div class=\"col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate\">
+								<div class=\"block-18 text-center\">
+									<div class=\"text\">
+										<div class=\"icon\"><span class=\"flaticon-coffee-cup\"></span></div>
+										<strong class=\"number\" data-number=\"".$res["count"]."\">0</strong>
+										<span>".$res["name"]."</span>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-coffee-cup"></span></div>
-									<strong class="number" data-number="32">0</strong>
-									<span>Awards</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-coffee-cup"></span></div>
-									<strong class="number" data-number="383000">0</strong>
-									<span>Employees</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18 text-center">
-								<div class="text">
-									<div class="icon"><span class="flaticon-coffee-cup"></span></div>
-									<strong class="number" data-number="170000">0</strong>
-									<span>Staff</span>
-								</div>
-							</div>
-						</div>
+							</div>";
+							}
+						?>
 					</div>
 				</div>
 			</div>
@@ -374,52 +358,24 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3">
-					<div class="menu-entry">
-						<a href="#" class="img" style="background-image: url(images/bs1.png);"></a>
-						<div class="text text-center pt-4">
-							<h3><a href="#">Blonde Vanilla Latte</a></h3>
-							<p>Blonde Espresso, velvety steamed milk & vanilla syrup make a beloved espresso classic</p>
-							<p class="price"><span>$3.45</span></p>
-							<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="menu-entry">
-						<a href="#" class="img" style="background-image: url(images/bs2.png);"></a>
-						<div class="text text-center pt-4">
-							<h3><a href="#">Java Chip Frappuccino</a></h3>
-							<p>Mocha sauce & Frap chips blended with milk & ice, topped with whipped cream & drizzle</p>
-							<p class="price"><span>$5.10</span></p>
-							<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="menu-entry">
-						<a href="#" class="img" style="background-image: url(images/bs3.png);"></a>
-						<div class="text text-center pt-4">
-							<h3><a href="#">Iced White Choc Mocha</a></h3>
-							<p>Espresso meets white choc sauce, milk & ice, being finished off with sweetened whipped
-								cream</p>
-							<p class="price"><span>$3.75</span></p>
-							<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="menu-entry">
-						<a href="#" class="img" style="background-image: url(images/bs4.png);"></a>
-						<div class="text text-center pt-4">
-							<h3><a href="#">Pumpkin Spice Latte</a></h3>
-							<p>Espresso & steamed milk with the celebrated combo of pumpkin, cinnamon, nutmeg & clove
-							</p>
-							<p class="price"><span>$4.25</span></p>
-							<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
-						</div>
-					</div>
-				</div>
+				<?php
+					$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(description, 1, 80) AS description, price, image FROM product
+					WHERE categoryID IN ('1', '4', '5') AND CHAR_LENGTH(name) < 20
+					ORDER BY RAND() LIMIT 4;");
+					while($res = mysqli_fetch_array($result)) {         
+						echo "<div class=\"col-md-3\">
+							<div class=\"menu-entry\">
+								<a href=\"#\" class=\"img\" style=\"background-image: url(".$res["image"].");\"></a>
+								<div class=\"text text-center pt-4\">
+									<h3><a href=\"#\">".$res["name"]."</a></h3>
+									<p>".$res["description"]."</p>
+									<p class=\"price\"><span>".$res["price"]."</span></p>
+									<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
+								</div>
+							</div>
+						</div>";
+					}
+				?>
 			</div>
 		</div>
 	</section>
@@ -428,7 +384,7 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="index.html" class="gallery img d-flex align-items-center"
+					<a href="index.php" class="gallery img d-flex align-items-center"
 						style="background-image: url(images/gallery-1.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-search"></span>
@@ -436,7 +392,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="index.html" class="gallery img d-flex align-items-center"
+					<a href="index.php" class="gallery img d-flex align-items-center"
 						style="background-image: url(images/gallery-2.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-search"></span>
@@ -444,7 +400,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="index.html" class="gallery img d-flex align-items-center"
+					<a href="index.php" class="gallery img d-flex align-items-center"
 						style="background-image: url(images/gallery-3.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-search"></span>
@@ -452,7 +408,7 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="index.html" class="gallery img d-flex align-items-center"
+					<a href="index.php" class="gallery img d-flex align-items-center"
 						style="background-image: url(images/gallery-4.jpg);">
 						<div class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-search"></span>
@@ -479,169 +435,76 @@
 						<div class="col-md-12 nav-link-wrap mb-5">
 							<div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab"
 								role="tablist" aria-orientation="vertical">
-								<a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
-									role="tab" aria-controls="v-pills-1" aria-selected="true">Hot Meals</a>
+								<a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Drinks</a>
 
-								<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab"
-									aria-controls="v-pills-2" aria-selected="false">Drinks</a>
-
-								<a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab"
-									aria-controls="v-pills-3" aria-selected="false">Desserts</a>
+								<?php
+									$result = mysqli_query($mysqli, "SELECT categoryID, name FROM category WHERE categoryID > 7;");
+						
+									while($res = mysqli_fetch_array($result)) {         
+										echo "<a class=\"nav-link\" id=\"v-pills-".$res["categoryID"]."-tab\" data-toggle=\"pill\" href=\"#v-pills-".$res["categoryID"]."\" role=\"tab\" aria-controls=\"v-pills-".$res["categoryID"]."\" aria-selected=\"false\">".$res["name"]."</a> ";
+									}
+								?>
 							</div>
 						</div>
+						
 						<div class="col-md-12 d-flex align-items-center">
+		            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+		              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+		              	<div class="row">
+						  	<?php
+							$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
+							WHERE categoryID BETWEEN 1 and 7 AND CHAR_LENGTH(name) < 20
+							ORDER BY RAND() LIMIT 3;");
 
-							<div class="tab-content ftco-animate" id="v-pills-tabContent">
+							while($res = mysqli_fetch_array($result)) {         
+								echo "<div class=\"col-md-4 text-center\">
+		              			<div class=\"menu-wrap\">
+		              				<a href=\"#\" class=\"menu-img img mb-4\" style=\"background-image: url(".$res["image"].");\"></a>
+		              				<div class=\"text\">
+		              					<h3><a href=\"#\">".$res["name"]."</a></h3>
+		              					<p>".$res["description"]."</p>
+		              					<p class=\"price\"><span>".$res["price"]."</span></p>
+		              					<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
+		              				</div>
+		              			</div>
+		              			</div>";
+							}
+							?>
+		              	</div>
+		              </div>
 
-								<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-									aria-labelledby="v-pills-1-tab">
-									<div class="row">
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dish-1.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Double-Smoked Bacon, Cheddar & Egg Sandwich</a></h3>
-													<p>Bacon smoked over hickory wood chips, stacked with fried egg and
-														melted Cheddar —all on our signature croissant bun.</p>
-													<p class="price"><span>$2.90</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dish-2.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Turkey, Provolone & Pesto on Ciabatta</a></h3>
-													<p>Thick-sliced turkey breast, melted provolone cheese, dry-roasted
-														red peppers and basil pesto on a ciabatta roll.</p>
-													<p class="price"><span>$5.45</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dish-3.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Crispy Grilled Cheese on Sourdough</a></h3>
-													<p>A blend of white Cheddar and mozzarella cheeses on sourdough
-														bread, topped with a Parmesan butter spread.</p>
-													<p class="price"><span>$6.90</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+					  <?php
+						$result1 = mysqli_query($mysqli, "SELECT categoryID FROM category WHERE categoryID > 7;");
 
-								<div class="tab-pane fade" id="v-pills-2" role="tabpanel"
-									aria-labelledby="v-pills-2-tab">
-									<div class="row">
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/drink-1.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Caffè Mocha</a></h3>
-													<p>Our rich espresso combined with bittersweet mocha
-														sauce and steamed milk, topped with sweetened whipped
-														cream. The coffee that always satisfies.
-													</p>
-													<p class="price"><span>$3.50</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/drink-2.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Hot Chocolate</a></h3>
-													<p>Steamed milk with vanilla and chocolate syrups. Topped
-														with sweetened whipped cream and chocolate drizzle. A
-														timeless classic made to sweeten your spirits.</p>
-													<p class="price"><span>$4.65</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/drink-3.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Vanilla Sweet Cream Brew</a></h3>
-													<p>Our custom blend of Cold Brew Coffee accented with vanilla and
-														topped with a delicate float of vanilla sweet cream. It's
-														over-the-top and super-smooth.</p>
-													<p class="price"><span>$2.50</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+						while($res1 = mysqli_fetch_array($result1)) { 
+							echo "<div class=\"tab-pane fade\" id=\"v-pills-".$res1["categoryID"]."\" role=\"tabpanel\" aria-labelledby=\"v-pills-".$res1["categoryID"]."-tab\">
+								<div class=\"row\">";
 
-								<div class="tab-pane fade" id="v-pills-3" role="tabpanel"
-									aria-labelledby="v-pills-3-tab">
-									<div class="row">
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dessert-1.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Double Chocolate Brownie</a></h3>
-													<p>Rich chocolate brownie with generous chunks of semisweet
-														chocolate oozing with chocolate sauce.</p>
-													<p class="price"><span>$7.25</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dessert-2.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Cinnamon Coffee Cake</a></h3>
-													<p>Buttery, moist, coffee cake swirled with a cinnamon-sugar blend
-														and finished with a crunchy streusel topping.</p>
-													<p class="price"><span>$7.50</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 text-center">
-											<div class="menu-wrap">
-												<a href="#" class="menu-img img mb-4"
-													style="background-image: url(images/dessert-3.jpg);"></a>
-												<div class="text">
-													<h3><a href="#">Chocolate Croissant</a></h3>
-													<p>Two generous pieces of chocolate wrapped in a butter croissant
-														with soft, flaky layers and a golden-brown crust.</p>
-													<p class="price"><span>$5.00</span></p>
-													<p><a href="#" class="btn btn-primary btn-outline-primary">Add to
-															cart</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+								$id = $res1["categoryID"];
+								$result2 = mysqli_query($mysqli, "SELECT name, SUBSTRING(DESCRIPTION, 1, 100) AS description, price, image FROM product
+								WHERE categoryID = '$id' AND CHAR_LENGTH(name) < 30
+								ORDER BY RAND() LIMIT 4;");
+	
+								while($res2 = mysqli_fetch_array($result2)) {         
+									echo "<div class=\"col-md-4 text-center\">
+									  <div class=\"menu-wrap\">
+										  <a href=\"#\" class=\"menu-img img mb-4\" style=\"background-image: url(".$res2["image"].");\"></a>
+										  <div class=\"text\">
+											  <h3><a href=\"#\">".$res2["name"]."</a></h3>
+											  <p>".$res2["description"]."</p>
+											  <p class=\"price\"><span>".$res2["price"]."</span></p>
+											  <p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to cart</a></p>
+										  </div>
+									  </div>
+									  </div>";
+								}
+									
+								echo "</div>
+							</div>";
+						}
+					  ?>
+		          </div>
+		        </div>
 					</div>
 				</div>
 			</div>
