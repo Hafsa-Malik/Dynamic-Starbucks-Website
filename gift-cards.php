@@ -1076,32 +1076,9 @@
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Recent Blog</h2>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">‘Today is Day 1’: Starbucks retail leaders at leadership
-                                        event</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 28, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Michael Ko</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-21 mb-4 d-flex">
-                            <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                            <div class="text">
-                                <h3 class="heading"><a href="#">A message from Howard Schultz: The next chapter of
-                                        Reinvention</a>
-                                </h3>
-                                <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Oct 15, 2022</a></div>
-                                    <div><a href="#"><span class="icon-person"></span> Howard Schultz</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 25</a></div>
-                                </div>
-                            </div>
-                        </div>
+						<?php
+						include "getRecentBlogs.php";
+						?>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
