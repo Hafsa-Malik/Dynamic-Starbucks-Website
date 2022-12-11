@@ -46,7 +46,7 @@ include_once("config.php");
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="menu.php" class="nav-link">Menu</a></li>
-					<li class="nav-item"><a href="gift-cards.html" class="nav-link">Gift Cards</a></li>
+					<li class="nav-item"><a href="gift-cards.php" class="nav-link">Gift Cards</a></li>
 					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
@@ -101,47 +101,30 @@ include_once("config.php");
 						      </tr>
 						    </thead>
 						    <tbody>
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
-						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/menu-2.jpg);"></div></td>
-						        
-						        <td class="product-name">
-						        	<h3>Creamy Latte Coffee</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
-						        
-						        <td class="price">$4.90</td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$4.90</td>
-						      </tr><!-- END TR-->
-
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
-						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/dish-2.jpg);"></div></td>
-						        
-						        <td class="product-name">
-						        	<h3>Grilled Ribs Beef</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
-						        
-						        <td class="price">$15.70</td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$15.70</td>
-						      </tr><!-- END TR-->
+							<?php
+								$result = mysqli_query($mysqli, "SELECT c.productID, c.quantity, p.name, p.image, p.price 
+								FROM cart c, product p WHERE c.productID = p.productID;");
+								$total = 0;
+								
+			        			while($res = mysqli_fetch_array($result)) { 
+									echo "<tr class=\"text-center\">
+										<td class=\"product-remove\"><a href=\"#\"><span class=\"icon-close\"></span></a></td>
+										<td class=\"image-prod\"><div class=\"img\" style=\"background-image:url(".$res["image"].");\"></div></td>
+										<td class=\"product-name\">
+											<h3>".$res["name"]."</h3>
+											<p>Far far away, behind the word mountains, far from the countries</p>
+										</td>
+										<td class=\"price\">$".$res["price"]."</td>
+										<td class=\"quantity\">
+											<div class=\"input-group mb-3\">
+											 <input type=\"text\" name=\"quantity\" class=\"quantity form-control input-number\" value=\"".$res["quantity"]."\">
+										  </div>
+										</td>
+										<td class=\"total\">$".$res["quantity"]*$res["price"]."</td>
+									</tr>";
+									$total = $total + ($res["quantity"]*$res["price"]);
+								}
+							?>
 						    </tbody>
 						  </table>
 					  </div>
@@ -153,20 +136,20 @@ include_once("config.php");
     					<h3>Cart Totals</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span>$20.60</span>
+    						<span>$<?php echo $total; ?></span>
     					</p>
     					<p class="d-flex">
     						<span>Delivery</span>
-    						<span>$0.00</span>
+    						<span>$1.00</span>
     					</p>
     					<p class="d-flex">
     						<span>Discount</span>
-    						<span>$3.00</span>
+    						<span>$0.00</span>
     					</p>
     					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>$17.60</span>
+    						<span>$<?php echo $total+1; ?></span>
     					</p>
     				</div>
     				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
@@ -186,7 +169,7 @@ include_once("config.php");
         </div>
         <div class="row">
 			<?php
-				$result = mysqli_query($mysqli, "SELECT name, SUBSTRING(description, 1, 80) AS description, price, image FROM product
+				$result = mysqli_query($mysqli, "SELECT productID AS id, name, SUBSTRING(description, 1, 70) AS description, price, image FROM product
 				WHERE CHAR_LENGTH(name) < 20
 				ORDER BY RAND() LIMIT 4;");
 				while($res = mysqli_fetch_array($result)) {         
@@ -197,7 +180,7 @@ include_once("config.php");
 								<h3><a href=\"#\">".$res["name"]."</a></h3>
 								<p>".$res["description"]."</p>
 								<p class=\"price\"><span>".$res["price"]."</span></p>
-								<p><a href=\"#\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
+								<p><a href=\"addToCart.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to add ".$res["name"]." to cart?')\" class=\"btn btn-primary btn-outline-primary\">Add to Cart</a></p>
 							</div>
 						</div>
 					</div>";
