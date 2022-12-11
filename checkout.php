@@ -109,7 +109,7 @@ include_once("config.php");
                 <div class="w-100"></div>
 		            <div class="col-md-12">
 		            	<div class="form-group">
-		            		<label for="country">State / Country</label>
+		            		<label for="country">Country</label>
 		            		<div class="select-wrap">
 		                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 		                  <select name="country" id="" class="form-control" required>
@@ -241,12 +241,12 @@ include_once("config.php");
             <div class="sidebar-box ftco-animate">
               <div class="categories">
                 <h3>Categories</h3>
-                <li><a href="#">Tour <span>(12)</span></a></li>
-                <li><a href="#">Hotel <span>(22)</span></a></li>
-                <li><a href="#">Coffee <span>(37)</span></a></li>
-                <li><a href="#">Drinks <span>(42)</span></a></li>
-                <li><a href="#">Foods <span>(14)</span></a></li>
-                <li><a href="#">Travel <span>(140)</span></a></li>
+                 <?php
+                  $result = mysqli_query($mysqli, "SELECT name, productsCount FROM category;");
+                  while($res = mysqli_fetch_array($result)) {         
+                    echo "<li><a href=\"#\">".$res["name"]." <span>(".$res["productsCount"].")</span></a></li>";
+                  }
+                ?> 
               </div>
             </div>
 
@@ -284,20 +284,6 @@ include_once("config.php");
                     <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3>Tag Cloud</h3>
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">dish</a>
-                <a href="#" class="tag-cloud-link">menu</a>
-                <a href="#" class="tag-cloud-link">food</a>
-                <a href="#" class="tag-cloud-link">sweet</a>
-                <a href="#" class="tag-cloud-link">tasty</a>
-                <a href="#" class="tag-cloud-link">delicious</a>
-                <a href="#" class="tag-cloud-link">desserts</a>
-                <a href="#" class="tag-cloud-link">drinks</a>
               </div>
             </div>
 
