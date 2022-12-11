@@ -247,26 +247,21 @@ include_once("config.php");
 				</div>
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-6">
-							<div class="menu-entry">
-								<a href="#" class="img" style="background-image: url(images/menu1.png);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry mt-lg-4">
-								<a href="#" class="img" style="background-image: url(images/menu2.png);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry">
-								<a href="#" class="img" style="background-image: url(images/menu3.jpg);"></a>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="menu-entry mt-lg-4">
-								<a href="#" class="img" style="background-image: url(images/menu4.png);"></a>
-							</div>
-						</div>
+							<?php
+								$result = mysqli_query($mysqli, "SELECT image FROM photogallery
+								WHERE type LIKE 'menu' ORDER BY RAND() LIMIT 4;");
+								$i = 0;
+								while($res = mysqli_fetch_array($result)) {         
+									
+									echo '<div class="col-md-6"><div class="menu-entry';
+									// check if i is even
+									if($i % 2 == 0) {
+										echo ' mt-lg-4';
+									}
+									echo '"><a href="#" class="img" style="background-image: url('.$res['image'].');"></a></div></div>';
+									$i++;
+								}
+							?>
 					</div>
 				</div>
 			</div>
