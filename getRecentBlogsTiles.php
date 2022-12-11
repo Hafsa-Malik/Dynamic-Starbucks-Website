@@ -15,17 +15,22 @@ usort($resultsArr, function($a, $b) {
     return compareDates($a['date_created'], $b['date_created']);
 });
 
-// display 2 most recent results
-for ($i = 0; $i < 2; $i++) {
+// display 3 most recent results
+for ($i = 0; $i < 3; $i++) {
     $res = $resultsArr[$i];
     echo '
-    <div class="block-21 mb-4 d-flex">
-    <a class="blog-img mr-4" style="background-image: url('.$res['image'].');"></a>
-    <div class="text">
-        <h3 class="heading"><a href="#">'.$res['title'].'</a></h3>
-        <div class="meta">
-        <div><a href="#"><span class="icon-calendar"></span> '.$res['date_created'].'</a></div>
-        <div><a href="#"><span class="icon-person"></span> '.$res['author'].'</a></div>
+    <div class="col-md-4 d-flex ftco-animate">
+    <div class="blog-entry align-self-stretch">
+        <a href="#" class="block-20"
+            style="background-image: url('.$res['image'].');">
+        </a>
+        <div class="text py-4 d-block">
+            <div class="meta">
+                <div><a href="#">'.$res['date_created'].'</a></div>
+                <div><a href="#">'.$res['author'].'</a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="#">'.$res['title'].'</a></h3>
+            <p>'.$res['description'].'</p>
         </div>
     </div>
     </div>
