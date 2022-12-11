@@ -57,7 +57,6 @@ include_once("config.php");
 							<a class="dropdown-item" href="checkout.php">Checkout</a>
 						</div>
 					</li>
-					<li class="nav-item"><a href="#" class="nav-link">Sign in</a></li>
 					<li class="nav-item cart"><a href="cart.php" class="nav-link"><span
 								class="icon icon-shopping_cart"></span><span
 								class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a>
@@ -322,7 +321,8 @@ include_once("config.php");
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Discover</span>
             <h2 class="mb-4">Our Products</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Whether you're seeking the best brew method for your favorite blend or exploring our rarest offerings, you’ve come to the
+							right place.</p>
           </div>
         </div>
     		<div class="row d-md-flex">
