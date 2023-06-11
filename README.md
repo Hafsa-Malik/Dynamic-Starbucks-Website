@@ -16,13 +16,13 @@ The Dynamic Starbucks Website project is an enhanced version of the [Starbucks W
 
 ## Technologies Used
 
-- HTML5: Structure and content of webpages.
-- CSS3: Styling and visual enhancements.
-- JavaScript: Adding interactivity and dynamic behavior.
-- Bootstrap 5: Responsive design framework for rapid development.
-- PHP: Server-side scripting language for dynamic functionality.
-- MySQL: Relational database management system for data storage and retrieval.
-- phpMyAdmin: Web-based administration tool for managing the MySQL database.
+- `HTML5`: Structure and content of webpages.
+- `CSS3`: Styling and visual enhancements.
+- `JavaScript`: Adding interactivity and dynamic behavior.
+- `Bootstrap 5`: Responsive design framework for rapid development.
+- `PHP`: Server-side scripting language for dynamic functionality.
+- `MySQL`: Relational database management system for data storage and retrieval.
+- `phpMyAdmin`: Web-based administration tool for managing the MySQL database.
 
 
 ## How to setup the database
