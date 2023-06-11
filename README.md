@@ -5,7 +5,7 @@ The Dynamic Starbucks Website project is an enhanced version of the [Starbucks W
 
 ## Features
 
-- **Database Integration:** The website integrates with a MySQL database using phpMyAdmin to store and retrieve data dynamically, such as products, user information, orders, and blog posts.
+- **Database Integration:** The website integrates with a MySQL database using phpMyAdmin to store and retrieve data dynamically, such as products, orders, and blog posts.
 - **Cart Functionality:** Users can add products to their cart, view the cart contents and proceed to checkout for a seamless shopping experience.
 - **Checkout Process:** The website includes a secure and user-friendly checkout process, allowing users to enter shipping details, select payment methods, and place orders securely.
 - **Blogs:** The dynamic blog section enables the display of engaging articles and updates, allowing users to read and interact with Starbucks-related content.
